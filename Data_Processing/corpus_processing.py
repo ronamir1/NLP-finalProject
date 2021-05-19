@@ -45,8 +45,6 @@ def remove_author_title(s, author, title):
 def normalize_text(s):
     # removing Niqqud
     s = re.sub(r'[\u0591-\u05BD\u05BF-\u05C2\u05C4-\u05C7]', '', s)
-    # removing newlines
-    s = s.replace('\n', ' ').replace('\r', ' ')
     return s.strip()
 
 
@@ -95,6 +93,7 @@ if __name__ == '__main__':
             text = f.read()
             text = remove_last_line_from_string(text)
             text = remove_author_title(text, author, title)
+            text = text.replace('\n', ' ').replace('\r', ' ') # removing newlines
             content.append(text)
             text = split_text_to_sentences(text)
             content_sep.append(text)
