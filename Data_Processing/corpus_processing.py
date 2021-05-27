@@ -10,6 +10,8 @@ from hebtokenizer import HebTokenizer
 
 DATA_PATH = Path(__file__).parent.parent / Path("Data")
 RAW_DATA_PATH = DATA_PATH / Path("public_domain_dump-master")
+PROCESSED_DATA_PATH = DATA_PATH / Path("poetry.csv")
+PROCESSED_DATA_PATH_PICKLE = DATA_PATH / Path("poetry.pkl.gz")
 CATALOG_DATA_PATH = RAW_DATA_PATH / Path("pseudocatalogue.csv")
 STRIPPED_TEXT_DATA_PATH = RAW_DATA_PATH / Path("txt_stripped")
 REPORT_PROGRESS = 20
@@ -48,7 +50,7 @@ def normalize_text(s):
     return s.strip()
 
 
-def split_text_to_sentences(text):
+def split_text_to_sentences(text: str) -> list:
     tokenizer = HebTokenizer()
     tokens = [word for (part, word) in tokenizer.tokenize(text)]
     sentences = []
@@ -93,12 +95,13 @@ if __name__ == '__main__':
             text = f.read()
             text = remove_last_line_from_string(text)
             text = remove_author_title(text, author, title)
-            text = text.replace('\n', ' ').replace('\r', ' ') # removing newlines
+            text = text.replace('\n', ' ').replace('\r', ' ').replace(r'\s\s+', ' ') # removing newlines and unneeded space
             content.append(text)
             text = split_text_to_sentences(text)
             content_sep.append(text)
     print("100.00% - finish processing")
 
     catalog_df["content"] = content
+    catalog_df.to_csv(PROCESSED_DATA_PATH, index=False)
     catalog_df["content_sep"] = content_sep
-    catalog_df.to_csv(DATA_PATH / Path("poetry.csv"), encoding='utf-8')
+    catalog_df.to_pickle(PROCESSED_DATA_PATH_PICKLE, compression='gzip')
