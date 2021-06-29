@@ -1,4 +1,6 @@
-import re
+"""
+This script only purpose is to fix dates in the authors data and make them at an uniform format.
+"""
 from dateutil import parser
 import pandas as pd
 import numpy as np
