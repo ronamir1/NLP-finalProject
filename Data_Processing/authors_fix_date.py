@@ -5,9 +5,9 @@ from dateutil import parser
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from corpus_processing import DATA_PATH
+from poetry_processing import DATA_PATH
 
-authors_manually_processed_path = DATA_PATH / "authors_processed/authors_small.csv"
+authors_manually_processed_path = DATA_PATH / "authors_processed/authors.csv"
 
 
 def fix_date(date):

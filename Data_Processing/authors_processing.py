@@ -5,7 +5,7 @@ import pywikibot
 import requests
 from bs4 import BeautifulSoup
 import datetime
-from corpus_processing import PROCESSED_DATA_PATH, DATA_PATH
+from poetry_processing import PROCESSED_DATA_PATH, DATA_PATH
 
 AUTHORS_PROCESSED_PATH = DATA_PATH / Path("authors_processed/authors.csv")
 

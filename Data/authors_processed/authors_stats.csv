@@ -1,4 +1,4 @@
-,songs_count,id,sex,p_birth,p_death,d_birth,d_death,Hebrew Speaker,sentence_total,sentence_mean,words_total,words_mean
+,songs_count,id,sex,p_birth,p_death,d_birth,d_death,hebrew_speaker,sentence_total,sentence_mean,words_total,words_mean
 הומרוס,3,195,male,Smyrna$$$$$$$$1 reference$$$$$$stated in$$$$$Freebase Data Dumps,Ios$$$$$$$$1 reference$$$$$$imported from Wikimedia project$$$$$Russian Wikipedia,0000-08-05,0000-08-05,False,9925,3308.3333333333335,210617,70205.66666666667
 שאול טשרניחובסקי,277,16,male,Mykhailivka,Jerusalem,1875-08-20,1943-10-14,,8743,31.56317689530686,146398,528.5126353790614
 עמנואל הרומי,21,107,male,Rome,Fermo,1260-01-01,1328-01-01,,858,40.857142857142854,101764,4845.9047619047615
