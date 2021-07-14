@@ -4,8 +4,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from enum import Enum, auto
 from poetry_processing import PROCESSED_DATA_PATH_PICKLE, DATA_PATH
-#from authors_processing import AUTHORS_PROCESSED_PATH
-AUTHORS_PROCESSED_PATH = DATA_PATH / "authors_processed" / "authors.csv"  # Temporary path
+AUTHORS_PROCESSED_PATH = DATA_PATH / "authors_processed" / "authors.csv"
 COMBINED_DATA_PATH = DATA_PATH / "data_set.csv"
 COMBINED_DATA_PATH_PICKLE = DATA_PATH / "data_set.pkl.gz"
 

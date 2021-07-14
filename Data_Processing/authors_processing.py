@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import datetime
 from poetry_processing import PROCESSED_DATA_PATH, DATA_PATH
 
-AUTHORS_PROCESSED_PATH = DATA_PATH / Path("authors_processed/authors.csv")
+AUTHORS_RAW_PROCESSED_PATH = DATA_PATH / Path("authors_processed/authors_raw.csv")
 
 
 def parse_place(place: str):
