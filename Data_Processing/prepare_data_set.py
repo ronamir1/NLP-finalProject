@@ -18,21 +18,21 @@ ISRAELI_PLACES = {"Tel Aviv", "Jaffa", "Jerusalem", "Haifa", "Nahalal", "Acre", 
 
 class TimePeriods(Enum):
     ancient = auto()
-    medieval = auto()
+    spain = auto()
     renaissance = auto()
-    enlightenment = auto()
-    revival = auto()
+    nineteenth = auto()
+    twentieth = auto()
     modern = auto()
 
 
 SEX = {"male": 0,
        "female": 1}
-TIME_PERIODS_RANGES = {TimePeriods.ancient: range(-2000, 900),
-                       TimePeriods.medieval: range(900, 1400),
-                       TimePeriods.renaissance: range(1400, 1700),
-                       TimePeriods.enlightenment: range(1700, 1880),
-                       TimePeriods.revival: range(1880, 1948),
-                       TimePeriods.modern: range(1948, 2030)}
+TIME_PERIODS_RANGES = {TimePeriods.ancient: range(-2000, 500),
+                       TimePeriods.spain: range(500, 1400),
+                       TimePeriods.renaissance: range(1400, 1800),
+                       TimePeriods.nineteenth: range(1800, 1900),
+                       TimePeriods.twentieth: range(1900, 2000),
+                       TimePeriods.modern: range(2000, 2100)}
 
 
 def get_period(date):
