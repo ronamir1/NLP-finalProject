@@ -61,8 +61,8 @@ if __name__ == "__main__":
 
     # make label integers only
     combined_df.sex = combined_df.sex.map(SEX)
-    combined_df.birth_period = combined_df.birth_period.apply(lambda x: x.value)
-    combined_df.death_period = combined_df.death_period.apply(lambda x: x.value)
+    combined_df.birth_period = combined_df.birth_period.apply(lambda x: x.value -1)
+    combined_df.death_period = combined_df.death_period.apply(lambda x: x.value -1)
     combined_df.birth_place_israel = combined_df.birth_place_israel.apply(lambda x: 1 if x else 0)
     combined_df.death_place_israel = combined_df.death_place_israel.apply(lambda x: 1 if x else 0)
     combined_df.hebrew_speaker = combined_df.hebrew_speaker.apply(lambda x: 1 if x else 0)
