@@ -69,11 +69,12 @@ if __name__ == "__main__":
     # save all data
     combined_df.to_csv(COMBINED_DATA_PATH, index=False, columns=DATA_SET_COLUMNS)
     # split data set to train,test, validation
+    combined_df = combined_df[DATA_SET_COLUMNS]
     np.random.seed(34)
     train, test = train_test_split(combined_df, test_size=0.3)
     validation, test = train_test_split(test, train_size=0.5)
-    train.to_csv(DATA_PATH / "train.csv")
-    test.to_csv(DATA_PATH / "test.csv")
-    validation.to_csv(DATA_PATH / "validation.csv")
+    train.to_csv(DATA_PATH / "train.csv", index=False)
+    test.to_csv(DATA_PATH / "test.csv", index=False)
+    validation.to_csv(DATA_PATH / "validation.csv", index=False)
 
 
