@@ -1,0 +1,6 @@
+classification of author born_in_israel:
+accuracy=0.9923736892278361
+precision=[0.99237369 0.        ]
+recall=[1. 0.]
+fscore=[0.99617225 0.        ]
+support=[1041    8]

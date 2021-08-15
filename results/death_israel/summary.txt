@@ -1,0 +1,6 @@
+classification of author died_in_israel:
+accuracy=0.8751191611058151
+precision=[0.90247253 0.81308411]
+recall=[0.91631799 0.78614458]
+fscore=[0.90934256 0.79938744]
+support=[717 332]

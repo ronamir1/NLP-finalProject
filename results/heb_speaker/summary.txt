@@ -1,0 +1,6 @@
+classification of author hebrew_speaker:
+accuracy=0.9714013346043852
+precision=[0.65384615 0.97947214]
+recall=[0.44736842 0.99109792]
+fscore=[0.53125    0.98525074]
+support=[  38 1011]
